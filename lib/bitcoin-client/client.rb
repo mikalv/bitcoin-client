@@ -113,10 +113,20 @@ class BitcoinClient::Client
   def gethashespersec
     @api.request 'gethashespersec'
   end
-
-  # Returns an object containing various state info.
-  def getinfo
+  
+  # Returns an object containing various state info for older altcoin versions.
+  def getwalletinfo
     @api.request 'getinfo'
+  end
+
+  # Returns an object containing various state info for wallet.
+  def getwalletinfo
+    @api.request 'getwalletinfo'
+  end
+  
+  # Returns an object containing various state info for wallet.
+  def getblockchaininfo
+    @api.request 'getblockchaininfo'
   end
 
   # Returns data about each connected network node.
