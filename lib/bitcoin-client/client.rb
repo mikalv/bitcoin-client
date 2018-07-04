@@ -115,7 +115,7 @@ class BitcoinClient::Client
   end
   
   # Returns an object containing various state info for older altcoin versions.
-  def getwalletinfo
+  def getinfo
     @api.request 'getinfo'
   end
 
